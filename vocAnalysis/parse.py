@@ -191,3 +191,6 @@ while(command != "exit"):
 		print("'"+command+"'", "command not found")
 		print("Command :")
 		print("(show token/show bigram/show trigram/search bigram/exit)")
+        
+        '''
+        '''
