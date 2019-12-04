@@ -48,7 +48,7 @@ Parameters:
 	n -> 2 for bigram, 3 for tri-gram, ...
 Return type: dict()
 '''
-def ngram_frequency(article, n)
+def ngram_frequency(article, n):
 	article = article.lower()
 	token_list = nltk.word_tokenize(article)
 	ngram_list = []
@@ -191,3 +191,6 @@ while(command != "exit"):
 		print("'"+command+"'", "command not found")
 		print("Command :")
 		print("(show token/show bigram/show trigram/search bigram/exit)")
+        
+        '''
+        '''
