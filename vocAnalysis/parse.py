@@ -48,7 +48,7 @@ Parameters:
 	n -> 2 for bigram, 3 for tri-gram, ...
 Return type: dict()
 '''
-def ngram_frequency(article, n)
+def ngram_frequency(article, n):
 	article = article.lower()
 	token_list = nltk.word_tokenize(article)
 	ngram_list = []
