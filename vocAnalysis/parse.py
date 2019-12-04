@@ -6,8 +6,8 @@
 import nltk
 
 '''
-Usage: 
-	1. return the token count of an article 
+Usage:
+	1. return the token count of an article
 	2. digit tokens should be removed, e.g, 1, 2, 3, 4,... 100, 101)
 	3. all tokens will be transformed to lower case
 	4. all punctuations will be removed [".", ":", ",", "?", "``", "''", "“", "’", "”", "!"]
@@ -39,7 +39,7 @@ def word_frequency(article):
 
 
 '''
-Usage: 
+Usage:
 	1. return the ngram count of an article (should be sorted)
 	2. all tokens will be transformed to lower case
 	3. all punctuations will be removed [".", ":", ",", "?", "``", "''", "“", "’", "”", "!"]
@@ -48,7 +48,7 @@ Parameters:
 	n -> 2 for bigram, 3 for tri-gram, ...
 Return type: dict()
 '''
-def ngram_frequency(article, n)
+def ngram_frequency(article, n):
 	article = article.lower()
 	token_list = nltk.word_tokenize(article)
 	ngram_list = []
@@ -109,10 +109,10 @@ def plot_bar_graph(wordcount, mode):
 	max_percent = 0
 	for word in list(wordcount.keys()):
 		totalCount += wordcount[word]
-	
+
 	for word in list(wordcount.keys()):
 		percentWord[word] = (wordcount[word]/totalCount)*100
-	
+
 	max_percent = max(percentWord.values())
 
 	for word in list(percentWord.keys())[:rows_to_plot]:
