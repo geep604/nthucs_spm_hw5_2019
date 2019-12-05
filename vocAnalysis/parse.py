@@ -123,7 +123,7 @@ def plot_bar_graph(wordcount, mode):
 		elif mode == 2:
 			print('{:>35}'.format(word+':'), end=' ')
 		print('|'+'='*int(bar_max_width*(percentWord[word]/max_percent))+'|',end=' ')
-		print(str(round(percentWord[word],2))+'%', '('+ wordcount[word] +')')
+		print(str(round(percentWord[word],2))+'%', '('+str( wordcount[word]) +')')
 
 
 '''
@@ -136,7 +136,7 @@ def search_bigram(bigram_count, command):
 	command = command.split()
 
 	if len(command) == 2:
-		if (command[0] = "_" and command[1] == "_") or (command[0] != "_" and command[1] != "_"):
+		if (command[0] == "_" and command[1] == "_") or (command[0] != "_" and command[1] != "_"):
 			print("bad command1...")
 			return
 		else:
@@ -160,7 +160,7 @@ def search_bigram(bigram_count, command):
 command = ""
 filename = "The Scarlet Letter.txt"
 print("reading data..." + " (" + filename + ")")
-f = open(filename)
+f = open(filename, encoding="utf-8")
 article = f.read()
 print("Command :")
 print("(show token/show bigram/show trigram/exit)")
